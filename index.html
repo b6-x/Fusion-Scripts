@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fusion Scripts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      color: white;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    #bgvid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+      filter: blur(2px);
+    }
+
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 3rem;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem;
+    }
+
+    .product {
+      background: rgba(0, 0, 0, 0.7);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      width: 300px;
+      padding: 1rem;
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+      border-color: cyan;
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      margin-top: 1rem;
+      padding: 0.7rem 1.4rem;
+      border: none;
+      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+      color: black;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #ccc;
+      background: rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <video autoplay loop muted playsinline id="bgvid">
+    <source src="background.mp4" type="video/mp4">
+  </video>
+  <div id="overlay"></div>
+
+  <header>Fusion Scripts</header>
+
+  <section class="product-grid">
+    <div class="product">
+      <img src="https://via.placeholder.com/300x160?text=Test+Script+1" alt="Test Script 1">
+      <h3>Test Script 1</h3>
+      <p>Basic speed and magnet enhancer for training.</p>
+      <button class="btn">View Details</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/300x160?text=Test+Script+2" alt="Test Script 2">
+      <h3>Test Script 2</h3>
+      <p>ESP, player highlight, and UI toggle demo.</p>
+      <button class="btn">Buy Now</button>
+    </div>
+  </section>
+
+  <footer>&copy; 2025 Fusion Scripts. All rights reserved.</footer>
+
+</body>
+</html>
